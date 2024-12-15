@@ -1,18 +1,7 @@
-# lindroid roms for Redmi K60/POCO F5 Pro
-# changelog
-# 2024/09/07
-## Upload EvolutionX
-# 2024/08-29
-## Upload Matrixx
-# 2024/08-30
-## Upload GKI without KernelSU  
-## Upload RisingOS
-Note that starting from this RisingOS build, SELinux and hw overlay are disabled with some HACK to make lindroid work by default.  
-Please also view patches below
-#### 0001-disable-selinux.patch ####
-#### 0001-revert-refresh-rate-6-commit-and-disable-hw-overlay.patch ####
-## Update mount points
-#### mount `/dev/dma_heap` instead of `/dev/ion` to avoid `Aborted` and to make freedreno work
-#### also mount `/sdcard` `/storage` `/data`
-patch:
-#### 0001-mount-dev-dma_heap-instead-of-dev-ion-also-mount-sdc.patch ####
+# Custom ROMs built for Redmi K60/POCO F5 Pro (mondrian) with Lindroid
+## Source
+You can find All patches and build guide [here](https://github.com/kde-yyds/device_xiaomi_mondrian-patch).
+## Notes
+Selinux is enforcing by default on my builds. It causes a dead touch on Lindroid. Disable it temporarily by running `setenforce 0` as root.  
+You need to additionally flash the gki image for LXC and KernelSU.  
+If you don't want to flash it, you can extract `odm,product,system,system_ext,vendor` images and compress them into a zip to install with DSU Sideloader
