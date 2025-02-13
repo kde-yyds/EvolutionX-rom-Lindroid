@@ -3,5 +3,4 @@
 You can find All patches and build guide [here](https://github.com/kde-yyds/device_xiaomi_mondrian-patch).
 ## Notes
 Selinux is enforcing by default on my builds. It causes a dead touch on Lindroid. Disable it temporarily by running `setenforce 0` as root.  
-You need to additionally flash the gki image for LXC and KernelSU.  
 If you don't want to flash it, you can extract `odm,product,system,system_ext,vendor` images and compress them into a zip to install with DSU Sideloader
